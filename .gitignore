@@ -48,4 +48,5 @@ out/
 out_expected.txt
 /*-timing.json
 
-treybastian_1brc
+1brc
+*.aot

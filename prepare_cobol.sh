@@ -15,4 +15,4 @@
 #  limitations under the License.
 #
 
-cobc -x treybastian_1brc.cbl
+cobc -x 1brc.cbl

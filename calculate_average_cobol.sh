@@ -15,4 +15,4 @@
 #  limitations under the License.
 #
 
-./treybastian_1brc
+./1brc

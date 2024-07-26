@@ -37,7 +37,7 @@ MEASUREMENTS_FILE="measurements_1B.txt"
 RUNS=10
 DEFAULT_JAVA_VERSION="21.0.1-open"
 : "${BUILD_JAVA_VERSION:=21.0.1-open}"
-RUN_TIME_LIMIT=300 # seconds
+RUN_TIME_LIMIT=1800 # seconds
 
 TIMEOUT=""
 if [ "$(uname -s)" == "Linux" ]; then
@@ -175,7 +175,7 @@ for fork in "$@"; do
   print_and_execute ln -s $MEASUREMENTS_FILE measurements.txt
 
   # Use hyperfine to run the benchmark for each fork
-  HYPERFINE_OPTS="--warmup 0 --runs $RUNS --export-json $fork-$filetimestamp-timing.json --output ./$fork-$filetimestamp.out"
+  HYPERFINE_OPTS="--warmup 0 --runs $RUNS --export-json $fork-$filetimestamp-timing.json" 
 
   # check if this script is running on a Linux box
   if [ "$(uname -s)" == "Linux" ]; then
